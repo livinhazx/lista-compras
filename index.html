@@ -17,13 +17,24 @@
     <div class="container">
     <img src="img/bag.png" alt="">
     <form class="formulario-de-compras" action="">
-      <input class="formulario-de-compra" type="text" placeholder="Digite o item que deseja adicionar" >
-      <button class="botao-salvar">Salvar Item</button>
+      <input class="formulario-de-compra" id="form-compra" type="text" placeholder="Digite o item que deseja adicionar" >
+      <button class="botao-salvar" id="adicionar-item">Salvar Item</button>
     </form>
 
     <h1 class="titulo-lista">Lista de Compras</h1>
-    <p class="paragrafo-lista">Sua lista está vazia. Adicione itens a ela para não esquecer nada na próxima compra!</p>
+    <ul id="lista-de-compras">
+      <li>
+        <div class="lista-item-container">
+          <input type="checkbox" id="checkbox-1">
+          <p> Ração de gato</p>
+        </div>
+        <p class="texto-data"> Segunda-feira (31-10-2025) ás 08:30 </p>
+      </li>
+
+    </ul>
+    <p class="paragrafo-lista" id="paragrafo-lista">Sua lista está vazia. Adicione itens a ela para não esquecer nada na próxima compra!</p>
 </div>
   </section>
+  <script src="script.js"></script>
 </body>
 </html>

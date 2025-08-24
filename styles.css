@@ -75,6 +75,7 @@ body {
 }
 
 .paragrafo-lista {
+    display: none;
     width: 400px;
     height: 80px;
     padding: 40px;
@@ -83,6 +84,27 @@ body {
     font-weight: 400;
     font-family: var(--fonte-texto);
 }
+
+.lista-item-container {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+   
+}
+
+#lista-de-compras li {
+  list-style-type: none;
+}
+
+.lista-item-container p {
+    margin: 16px;
+}
+
+.texto-data {
+    font-size: 8px;
+}
+
+
 
 
 
