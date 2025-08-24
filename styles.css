@@ -1,95 +1,94 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --cor-primaria: #F55B64;
-    --cor-secundaria: #C2373F;
-    --neutro: #F9F9F9;
-    --preto: #131730;
-    --fonte-titulo: "Krona One", sans-serif;
-    --fonte-texto: 'Numans', sans-serif;
-    --degrade-azul: linear-gradient(180deg, #000000 0%, #26327F 100%);
+  --cor-primaria: #f55b64;
+  --cor-secundaria: #c2373f;
+  --neutro: #f9f9f9;
+  --preto: #131730;
+  --fonte-titulo: "Krona One", sans-serif;
+  --fonte-texto: "Numans", sans-serif;
+  --degrade-azul: Alinear-gradient(180deg, #000000 0%, #26327f 100%);
 }
 
 body {
-    height: 100vh;
-    background: var(--degrade-azul);
-    background-repeat: no-repeat;
-    font-family: var(--fonte-titulo);
+  height: 100vh;
+  background: var(--degrade-azul);
+  background-repeat: no-repeat;
+  font-family: var(--fonte-titulo);
 }
 
 .principal {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--neutro);
-    width: 440px;
-    height: 600px;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--neutro);
+  width: 440px;
+  height: 600px;
+  border-radius: 16px;
 }
 
 .container img {
-    padding: 50px;
+  padding: 50px;
 }
 .formulario-de-compras {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .formulario-de-compra {
-    display: block;
-    width: 300px;
-    height: 40px;
-    border-radius: 30px;
-    border: 2px var(--preto) solid;
-    text-align: center;
+  display: block;
+  width: 300px;
+  height: 40px;
+  border-radius: 30px;
+  border: 2px var(--preto) solid;
+  text-align: center;
 }
 .botao-salvar {
-    width: 100px;
-    height: 40px;
-    border-radius: 30px;
-    border: none;
-    color: var(--neutro);
-    background-color: var(--cor-primaria);
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  color: var(--neutro);
+  background-color: var(--cor-primaria);
 }
 
-.titulo-lista{
-    color: var(--cor-primaria);
-    font-size: 30px;
-    margin-top: 40px;
-    text-align: left;
+.titulo-lista {
+  color: var(--cor-primaria);
+  font-size: 30px;
+  margin-top: 40px;
+  text-align: left;
 }
 
 .paragrafo-lista {
-    display: none;
-    width: 400px;
-    height: 80px;
-    padding: 40px;
-    color: var(--preto);
-    font-size: 20px;
-    font-weight: 400;
-    font-family: var(--fonte-texto);
+  display: none;
+  width: 400px;
+  height: 80px;
+  padding: 40px;
+  color: var(--preto);
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--fonte-texto);
 }
 
 .lista-item-container {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-   
+  display: flex;
+  align-items: center;
+  font-size: 16px;
 }
 
 #lista-de-compras li {
@@ -97,15 +96,9 @@ body {
 }
 
 .lista-item-container p {
-    margin: 16px;
+  margin: 16px;
 }
 
 .texto-data {
-    font-size: 8px;
+  font-size: 8px;
 }
-
-
-
-
-
-

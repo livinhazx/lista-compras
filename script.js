@@ -1,64 +1,57 @@
-const adicionarItem = document.getElementById('form-compra')
-const listaDeCompras = document.getElementById("lista-de-compras")
-const adicionaItem = document.getElementById('adicionar-item')
-const paragrafoLista = document.getElementById('paragrafo-lista')
+const adicionarItem = document.getElementById("form-compra");
+const listaDeCompras = document.getElementById("lista-de-compras");
+const adicionaItem = document.getElementById("adicionar-item");
+const paragrafoLista = document.getElementById("paragrafo-lista");
 
 const atualizarMensagem = () => {
-  const itensVisiveis = Array.from(listaDeCompras.children).filter(li => li.style.display !== "none")
-  if(itensVisiveis.length === 0) {
-    paragrafoLista.style.display = "block"
+  const itensVisiveis = Array.from(listaDeCompras.children).filter(
+    (li) => li.style.display !== "none"
+  );
+  if (itensVisiveis.length === 0) {
+    paragrafoLista.style.display = "block";
   } else {
-    paragrafoLista.style.display = "none"
+    paragrafoLista.style.display = "none";
   }
-}
-
-
+};
 
 // chama no início
-atualizarMensagem()
+atualizarMensagem();
 
-
-let contador = 0
+let contador = 0;
 
 adicionaItem.addEventListener("click", (evento) => {
-    evento.preventDefault()
+  evento.preventDefault();
 
-    if (adicionarItem.value.trim() === "") {
-        alert("É necessário adicionar algo.")
-        return
-    } 
+  if (adicionarItem.value.trim() === "") {
+    alert("É necessário adicionar algo.");
+    return;
+  }
 
-    const itemLista = document.createElement("li")
-    const containerLista = document.createElement("div")
-    containerLista.classList.add("lista-item-container")
+  const itemLista = document.createElement("li");
+  const containerLista = document.createElement("div");
+  containerLista.classList.add("lista-item-container");
 
-    const inputCheckbox = document.createElement("input")
-    inputCheckbox.type = "checkbox";
-    inputCheckbox.id = "checkbox-" + contador++
+  const inputCheckbox = document.createElement("input");
+  inputCheckbox.type = "checkbox";
+  inputCheckbox.id = "checkbox-" + contador++;
 
-    const nomeItem = document.createElement("p")
-    nomeItem.textContent = adicionarItem.value
+  const nomeItem = document.createElement("p");
+  nomeItem.textContent = adicionarItem.value;
 
-    
-    containerLista.appendChild(inputCheckbox)
-    containerLista.appendChild(nomeItem)
-    itemLista.appendChild(containerLista)
-    listaDeCompras.appendChild(itemLista)
+  containerLista.appendChild(inputCheckbox);
+  containerLista.appendChild(nomeItem);
+  itemLista.appendChild(containerLista);
+  listaDeCompras.appendChild(itemLista);
 
-    
-inputCheckbox.addEventListener("click", () => {
-    if(inputCheckbox.checked) {
-        itemLista.style.textDecoration = "line-through";
+  inputCheckbox.addEventListener("click", () => {
+    if (inputCheckbox.checked) {
+      itemLista.style.textDecoration = "line-through";
     } else {
-        itemLista.style.textDecoration = "none";
+      itemLista.style.textDecoration = "none";
     }
-})
+  });
 
+  adicionarItem.value = "";
 
-    adicionarItem.value = ""
-    
-    atualizarMensagem()
-
-})
-
-
+  atualizarMensagem();
+});
