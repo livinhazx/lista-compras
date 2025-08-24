@@ -2,6 +2,7 @@ const adicionarItem = document.getElementById("form-compra");
 const listaDeCompras = document.getElementById("lista-de-compras");
 const adicionaItem = document.getElementById("adicionar-item");
 const paragrafoLista = document.getElementById("paragrafo-lista");
+const textoData = document.getElementById("texto-data")
 
 const atualizarMensagem = () => {
   const itensVisiveis = Array.from(listaDeCompras.children).filter(
@@ -36,12 +37,31 @@ adicionaItem.addEventListener("click", (evento) => {
   inputCheckbox.id = "checkbox-" + contador++;
 
   const nomeItem = document.createElement("p");
-  nomeItem.textContent = adicionarItem.value;
+  nomeItem.innerText = adicionarItem.value;
+
+  
+  const diaDaSemana = new Date().toLocaleDateString("pt-BR", {
+    weekday: "long",
+  });
+
+  const data = new Date().toLocaleDateString("pt-BR")
+
+  const hora = new Date().toLocaleTimeString("pt-BR", {
+    hour: "numeric",
+    minute: "numeric"
+  }
+  )
+
+  const dataCompleta = ` ${diaDaSemana} (${data}) as ${hora}`
+  const itemData = document.createElement("p")
+  itemData.innerText = dataCompleta
+  itemData.classList.add("texto-data")
 
   containerLista.appendChild(inputCheckbox);
   containerLista.appendChild(nomeItem);
   itemLista.appendChild(containerLista);
   listaDeCompras.appendChild(itemLista);
+  itemLista.appendChild(itemData)
 
   inputCheckbox.addEventListener("click", () => {
     if (inputCheckbox.checked) {
@@ -51,7 +71,6 @@ adicionaItem.addEventListener("click", (evento) => {
     }
   });
 
-  adicionarItem.value = "";
-
+  
   atualizarMensagem();
 });
